@@ -1,0 +1,176 @@
+version: 3
+hotkeys:
+  toggle-window:
+    - Ctrl-Space
+  copy:
+    - Ctrl-Shift-C
+  paste:
+    - Ctrl-Shift-V
+    - Shift-Insert
+  home:
+    - Home
+  end:
+    - End
+  previous-word:
+    - Ctrl-Left
+  next-word:
+    - Ctrl-Right
+  delete-previous-word:
+    - Ctrl-Backspace
+  delete-next-word:
+    - Ctrl-Delete
+  clear: []
+  zoom-in:
+    - Ctrl-=
+    - Ctrl-Shift-=
+  zoom-out:
+    - Ctrl--
+    - Ctrl-Shift--
+  reset-zoom:
+    - Ctrl-0
+  ctrl-c:
+    - Ctrl-C
+  copy-current-path: []
+  search:
+    - Ctrl-Shift-F
+  pane-focus-all:
+    - Ctrl-Shift-I
+  scroll-to-bottom: []
+  restart-telnet-session: []
+  restart-ssh-session: []
+  launch-winscp: []
+  settings:
+    - Ctrl-,
+  serial:
+    - Alt-K
+  restart-serial-session: []
+  new-window:
+    - Ctrl-Shift-N
+  new-tab:
+    - Ctrl-Shift-T
+  profile-selector:
+    - Ctrl-Shift-T
+  toggle-fullscreen:
+    - F11
+    - Alt-Enter
+  rename-tab:
+    - Ctrl-Shift-R
+  close-tab:
+    - Ctrl-Shift-W
+  reopen-tab:
+    - Ctrl-Shift-T
+  toggle-last-tab: []
+  next-tab:
+    - - Ctrl-Tab
+    - - Alt-Right
+    - - Alt-Down
+  previous-tab:
+    - - Ctrl-Shift-Tab
+    - - Alt-Left
+    - - Alt-Up
+  move-tab-left:
+    - Ctrl-Shift-PageUp
+  move-tab-right:
+    - Ctrl-Shift-PageDown
+  rearrange-panes:
+    - Ctrl-Shift
+  duplicate-tab: []
+  tab-1:
+    - Alt-1
+  tab-2:
+    - Alt-2
+  tab-3:
+    - Alt-3
+  tab-4:
+    - Alt-4
+  tab-5:
+    - Alt-5
+  tab-6:
+    - Alt-6
+  tab-7:
+    - Alt-7
+  tab-8:
+    - Alt-8
+  tab-9:
+    - Alt-9
+  tab-10:
+    - Alt-0
+  tab-11: []
+  tab-12: []
+  tab-13: []
+  tab-14: []
+  tab-15: []
+  tab-16: []
+  tab-17: []
+  tab-18: []
+  tab-19: []
+  tab-20: []
+  split-right:
+    - Ctrl-Shift-E
+  split-bottom:
+    - Ctrl-Shift-D
+  split-left: []
+  split-top: []
+  pane-maximize:
+    - Ctrl-Alt-Enter
+  pane-nav-up:
+    - Ctrl-Alt-Up
+  pane-nav-down:
+    - Ctrl-Alt-Down
+  pane-nav-left:
+    - Ctrl-Alt-Left
+  pane-nav-right:
+    - Ctrl-Alt-Right
+  pane-nav-previous:
+    - Ctrl-Alt-[
+  pane-nav-next:
+    - Ctrl-Alt-]
+  switch-profile:
+    - Ctrl-Alt-T
+  close-pane: []
+  profile: {}
+  profile-selectors: {}
+  select-all:
+    - Ctrl-Shift-A
+terminal:
+  searchOptions: {}
+  colorScheme:
+    name: Darkside
+    foreground: '#bababa'
+    background: '#222324'
+    cursor: '#bbbbbb'
+    colors:
+      - '#000000'
+      - '#e8341c'
+      - '#68c256'
+      - '#f2d42c'
+      - '#1c98e8'
+      - '#8e69c9'
+      - '#1c98e8'
+      - '#bababa'
+      - '#000000'
+      - '#e05a4f'
+      - '#77b869'
+      - '#efd64b'
+      - '#387cd3'
+      - '#957bbe'
+      - '#3d97e2'
+      - '#bababa'
+  fontSize: 15
+  cursor: beam
+  profile: local:git-bash
+  customColorSchemes: []
+  autoOpen: true
+ssh: {}
+configSync:
+  parts: {}
+clickableLinks:
+  modifier: ctrlKey
+appearance:
+  tabsLocation: right
+  frame: native
+hacks: {}
+pluginBlacklist: []
+profileDefaults: {}
+recoverTabs: false
+profiles: []
