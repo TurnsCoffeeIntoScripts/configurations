@@ -1,0 +1,130 @@
+{
+    "[python]": {
+
+        "editor.insertSpaces": true,
+        "editor.tabSize": 2
+    },
+    "editor.semanticTokenColorCustomizations": {
+        "enabled": true, // enable for all themes
+    },
+    "workbench.tree.indent": 16,
+    "workbench.colorCustomizations": {
+        /*"activityBar.background": "#002300"*/
+    },
+    "editor.tokenColorCustomizations": {/*2AC400*/
+            "textMateRules": [{
+                "scope": [
+                    "keyword.control.shell"
+                ],
+                "settings": {
+                    "foreground": "#F92672"
+                }
+            },
+            {
+                "scope": [
+                    "string.quoted.double.shell"
+                ],
+                "settings": {
+                    "foreground": "#E6DB74"
+                }
+            },
+            {
+                "scope": [
+                    "entity.name.function.shell"
+                ],
+                "settings": {
+                    "foreground": "#A6E22E"
+                }
+            },
+            {
+                "scope": [
+                    "comment.line.number-sign.shebang.shell"
+                ],
+                "settings": {
+                    "foreground": "#2AC400"
+                }
+            },
+            {
+                "scope": [
+                    "comment.line.number-sign.shell"
+                ],
+                "settings": {
+                    "foreground": "#2AC400"
+                }
+            },
+            {
+                "scope": [
+                    "variable.other.bracket.shell"
+                ],
+                "settings": {
+                    "foreground": "#FBFFD7"
+                }
+            },
+            {
+                "scope": [
+                    "support.function.builtin.shell"
+                ],
+                "settings": {
+                    "foreground": "#569CD6"
+                }
+            }
+        ],
+    },
+    "todo-tree.general.tags": [
+        "BUG",
+        "FIXME",
+        "TODO",
+    ],
+    "todo-tree.tree.showScanModeButton": false,
+    "todo-tree.highlights.defaultHighlight": {
+        "foreground": "white",
+        "background": "#9B870C",
+        "icon": "check",
+        "type": "text"
+    },
+    "todo-tree.highlights.customHighlight": {
+        "TODO": {
+            "icon": "check",
+            "type": "line",
+            "gutterIcon": true
+        },
+        "FIXME": {
+            "background": "#505050",
+            "foreground": "orange",
+            "icon": "flame",
+            "gutterIcon": true
+        },
+        "BUG": {
+            "background": "#505050",
+            "foreground": "red",
+            "icon": "lock",
+            "gutterIcon": true
+        }
+    },
+    "explorer.confirmDelete": false,
+    "files.associations": {
+        "*$": "bash",
+        "^[a-zA-Z]+$": "bash"
+    },
+    "startanyshell.shells": [
+        {
+            "description": "Git Bash VSC",
+            "command": "\"C:\\Program Files\\Git\\git-bash.exe\""
+        },
+        {
+            "description": "Developer Command Prompt for VS2015",
+            "command": "start \"%description%\" /WAIT \"%HOMEDRIVE%\\Program Files (x86)\\Microsoft Visual Studio 14.0\\Common7\\Tools\\VsDevCmd.bat\""
+        }
+    ],
+    "workbench.editorAssociations": {
+        "*.ipynb": "jupyter-notebook"
+    },
+    "notebook.cellToolbarLocation": {
+        "default": "right",
+        "jupyter-notebook": "left"
+    },
+    "security.workspace.trust.untrustedFiles": "open",
+    "redhat.telemetry.enabled": false,
+    "editor.detectIndentation": false,
+    "explorer.confirmDragAndDrop": false,
+}

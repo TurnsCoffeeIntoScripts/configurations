@@ -1,0 +1,25 @@
+PERSO
+https://www.gnu.org/software/bash/manual/bash.html#Shell-Parameter-Expansion
+
+
+This pattern holds for other variable substitutions too, notably:
+    • ${var:=value}
+        ○ if $var is set to any non-empty string, leave it unchanged; otherwise, set $var to value.
+    • ${var=value}
+        ○ if $var is set to any value (including an empty string), leave it unchanged; otherwise, set $var to value.
+    • ${var:?message}
+        ○ if $var is set to any non-empty string, do nothing; otherwise, complain using the given message' (where a default message is supplied if message is itself empty).
+    • ${var?message}
+        ○ if $var is set to any value (including an empty string), do nothing; otherwise, complain using the given message'.
+
+https://stackoverflow.com/questions/14152534/variable-expansion-in-curly-braces
+
+
+https://linuxize.com/post/bashrc-vs-bash-profile/#bash-startup-files
+
+
+Read order on startup:
+    1. /etc/profile
+    2. ~/.bash_profile
+    3. ~/.bash_login
+    4. ~/.profile
