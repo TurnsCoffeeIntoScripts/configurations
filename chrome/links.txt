@@ -1,0 +1,6 @@
+TAAG: http://patorjk.com/software/taag/#p=display&f=Roman&t=
+Encoding:
+    https://en.wikipedia.org/wiki/Percent-encoding
+    http://sites.psu.edu/symbolcodes/codehtml/
+    https://www.utf8-chartable.de/unicode-utf8-table.pl?number=1024&unicodeinhtml=hex
+    

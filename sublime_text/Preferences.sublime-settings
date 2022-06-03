@@ -1,0 +1,18 @@
+{
+	"color_scheme": "Monokai.sublime-color-scheme",
+	"font_face": 13,
+	"ignored_packages":
+	[
+		"Markdown",
+		"Vintage",
+	],
+	"open_files_in_new_window": false,
+	"show_encoding": true,
+	"spell_check": false,
+	"tab_size": 4,
+	"theme": "Default.sublime-theme",
+	"translate_tabs_to_spaces": true,
+	"word_wrap": "false",
+	"caret_style": "blink",
+	"font_size": 11,
+}

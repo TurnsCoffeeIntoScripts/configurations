@@ -1,0 +1,158 @@
+PS1='\e[0;32m\u \e[0;33m\W \e[0;32m\e[m'
+#PS1="\[$WHITE\]\n[\W]" 
+PS1+="\[\$(git_color)\]"
+PS1+="\$(git_branch)"  
+PS1+="\[$CLR_RESET\] $>"
+export PS1
+
+function git_color {
+    local git_status="$(git status 2> /dev/null)"
+
+    if [[ $git_status =~ "staged for commit" ]]; then
+        echo -e $CLR_TXT_LIGHT_RED
+    elif [[ $git_status =~ "Changes to be committed" ]]; then
+        echo -e $CLR_TXT_LIGHT_RED
+    elif [[ ${git_status} =~ "rebase in progress" ]]; then
+        echo -e $CLR_TXT_YELLOW
+    elif [[ ${git_status} =~ "have diverged" ]]; then
+        echo -e $CLR_TXT_YELLOW
+    elif [[ $git_status =~ "branch is ahead of" ]]; then
+        echo -e $CLR_TXT_LIGHT_CYAN
+    elif [[ $git_status =~ "Your branch is behind" ]]; then
+        echo -e $CLR_TXT_BROWN
+    elif [[ $git_status =~ "nothing to commit" ]]; then
+        echo -e $CLR_TXT_LIGHT_GREEN
+    else
+        echo -e $CLR_TXT_LIGHT_RED
+    fi
+}
+
+function git_branch {
+    local git_status="$(git status 2> /dev/null)"
+    local on_branch="On branch ([^${IFS}]*)"
+    local on_commit="HEAD detached at ([^${IFS}]*)"
+
+    if [[ $git_status =~ $on_branch ]]; then
+        local branch=${BASH_REMATCH[1]}
+        echo "($branch)"
+    elif [[ $git_status =~ $on_commit ]]; then
+        local commit=${BASH_REMATCH[1]}
+        echo "($commit)"
+    fi
+}
+
+function git_color_branch {
+    local git_status="$(git status 2> /dev/null)"
+    local on_branch="On branch ([^${IFS}]*)"
+    local on_commit="HEAD detached at ([^${IFS}]*)"
+
+    local tempColor=""
+    local tempBranch=""
+    local modName=""
+
+    if [[ $git_status =~ "staged for commit" ]]; then
+        tempColor=$CLR_TXT_LIGHT_RED
+    elif [[ $git_status =~ "Changes to be committed" ]]; then
+        tempColor=$CLR_TXT_LIGHT_RED
+    elif [[ $git_status =~ "branch is ahead of" ]]; then
+        tempColor=$CLR_TXT_LIGHT_CYAN
+    elif [[ $git_status =~ "nothing to commit" ]]; then
+        tempColor=$CLR_TXT_LIGHT_GREEN
+    else
+        tempColor=$CLR_TXT_LIGHT_RED
+    fi
+
+    if [[ $git_status =~ $on_branch ]]; then
+        local branch=${BASH_REMATCH[1]}
+        tempBranch="($branch)"
+    elif [[ $git_status =~ $on_commit ]]; then
+        local commit=${BASH_REMATCH[1]}
+        tempBranch="($commit)"
+    fi
+
+    if [ $# -eq 1 ]; then
+        modName=$1
+    fi
+
+    #echo -e $modName" --> "$tempColor$tempBranch$CLR_RESET
+    echo -e $modName" "$tempColor$tempBranch$CLR_RESET
+}
+
+#########################################################
+#########################################################
+#########################################################
+#########################################################
+
+
+function git_color {
+    local git_status="$(git status 2> /dev/null)"
+
+    if [[ $git_status =~ "staged for commit" ]]; then
+        echo -e $CLR_TXT_LIGHT_RED
+    elif [[ $git_status =~ "Changes to be committed" ]]; then
+        echo -e $CLR_TXT_LIGHT_RED
+    elif [[ ${git_status} =~ "rebase in progress" ]]; then
+        echo -e $CLR_TXT_YELLOW
+    elif [[ ${git_status} =~ "have diverged" ]]; then
+        echo -e $CLR_TXT_YELLOW
+    elif [[ $git_status =~ "branch is ahead of" ]]; then
+        echo -e $CLR_TXT_LIGHT_CYAN
+    elif [[ $git_status =~ "Your branch is behind" ]]; then
+        echo -e $CLR_TXT_BROWN
+    elif [[ $git_status =~ "nothing to commit" ]]; then
+        echo -e $CLR_TXT_LIGHT_GREEN
+    else
+        echo -e $CLR_TXT_LIGHT_RED
+    fi
+}
+
+function git_branch {
+    local git_status="$(git status 2> /dev/null)"
+    local on_branch="On branch ([^${IFS}]*)"
+    local on_commit="HEAD detached at ([^${IFS}]*)"
+
+    if [[ $git_status =~ $on_branch ]]; then
+        local branch=${BASH_REMATCH[1]}
+        echo "($branch)"
+    elif [[ $git_status =~ $on_commit ]]; then
+        local commit=${BASH_REMATCH[1]}
+        echo "($commit)"
+    fi
+}
+
+function git_color_branch {
+    local git_status="$(git status 2> /dev/null)"
+    local on_branch="On branch ([^${IFS}]*)"
+    local on_commit="HEAD detached at ([^${IFS}]*)"
+
+    local tempColor=""
+    local tempBranch=""
+    local modName=""
+
+    if [[ $git_status =~ "staged for commit" ]]; then
+        tempColor=$CLR_TXT_LIGHT_RED
+    elif [[ $git_status =~ "Changes to be committed" ]]; then
+        tempColor=$CLR_TXT_LIGHT_RED
+    elif [[ $git_status =~ "branch is ahead of" ]]; then
+        tempColor=$CLR_TXT_LIGHT_CYAN
+    elif [[ $git_status =~ "nothing to commit" ]]; then
+        tempColor=$CLR_TXT_LIGHT_GREEN
+    else
+        tempColor=$CLR_TXT_LIGHT_RED
+    fi
+
+    if [[ $git_status =~ $on_branch ]]; then
+        local branch=${BASH_REMATCH[1]}
+        tempBranch="($branch)"
+    elif [[ $git_status =~ $on_commit ]]; then
+        local commit=${BASH_REMATCH[1]}
+        tempBranch="($commit)"
+    fi
+
+    if [ $# -eq 1 ]; then
+        modName=$1
+    fi
+
+    #echo -e $modName" --> "$tempColor$tempBranch$CLR_RESET
+    echo -e $modName" "$tempColor$tempBranch$CLR_RESET
+}
