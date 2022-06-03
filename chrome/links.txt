@@ -3,4 +3,18 @@ Encoding:
     https://en.wikipedia.org/wiki/Percent-encoding
     http://sites.psu.edu/symbolcodes/codehtml/
     https://www.utf8-chartable.de/unicode-utf8-table.pl?number=1024&unicodeinhtml=hex
+
+https://devhints.io/
+
+https://howchoo.com/g/m2u0nthkyti/vim-convert-tabs-to-spaces
+
+https://git-scm.com/docs/pretty-formats
+
+https://github.com/bxcodec/faker/blob/master/WithStructTag.md
+
+https://www.shellhacks.com/bash-colors/
+
+https://pypl.github.io/PYPL.html
+
+
     
